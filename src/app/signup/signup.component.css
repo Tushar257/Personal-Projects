@@ -1,0 +1,13 @@
+.background-left{
+
+    background: linear-gradient(to bottom, #8debd3 7%, #33ccff 84%);
+    background-image: url("/assets/Sign-Up-BG-Image.png");
+    background-repeat: no-repeat;
+    background-size:  contain;
+}
+
+
+.background-right{
+
+    background: linear-gradient(to bottom, #8debd3 7%, #33ccff 84%);
+}

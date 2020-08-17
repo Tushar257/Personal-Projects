@@ -1,0 +1,60 @@
+<div class="row mt-5" style="margin: 0;">
+    <div class="offset-sm-1 col-sm-10">
+        <div class="card text-blank bg-light">
+            <div class="card-body">
+                <div class="card-title">Profile</div>
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img [src]="user.photoURL" width="256" height="256" class="img-circle">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" placeholder="First Name" class="form-control" [(ngModel)]="user.displayName">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">E-mail</label>
+                                <div class="col-sm-8">
+                                    <input type="text" placeholder="email" class="form-control" readonly [(ngModel)]="user.email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Bio</label>
+                                <div class="col-sm-8">
+                                    <textarea rows=6 placeholder="Tell the world about yourself." class="form-control" [(ngModel)]="user.bio"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-5" style="margin: 0;">
+    <div class="offset-sm-1 col-sm-10">
+        <div class="card text-blank bg-light">
+            <div class="card-body">
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group ">
+                                <label class="col-sm-2 col-form-label">Your Interests</label>
+                                <div class="col-sm-12">
+                                    <textarea rows=6 placeholder="I like to watch Netflix..." class="form-control" [(ngModel)]="user.interests"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-warning pull-right" (click)="update()">Update</button>
+                <div class="alert alert-success fade show pull-left" role="alert" *ngIf="message">
+                    {{message}}
+                </div>     
+            </div>
+        </div>
+    </div>
+</div>
